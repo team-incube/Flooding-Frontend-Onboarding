@@ -1,5 +1,10 @@
+import Header from "@/widgets/header/ui";
+
 export default function HomebasePage() {
   return (
-    <div>홈베이스</div>
+    <>
+      <Header />
+      홈베이스
+    </>
   );
 }
