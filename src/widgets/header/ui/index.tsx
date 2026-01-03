@@ -1,6 +1,7 @@
 "use client";
 
 import Logo from "@/shared/assets/svg/Logo";
+import Profile from "@/shared/assets/icons/Profile";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -16,19 +17,19 @@ export default function Header() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header className="bg-[#ffffff] py-9">
+    <header className="bg-[#ffffff] py-6">
       <div className="max-w-[1500px] mx-auto px-9 flex items-center justify-between">
         <Logo />
-        
-        <nav className="flex gap-8 flex-1 ml-10">
+
+        <nav className="flex gap-5 flex-1 ml-20 pt-2">
           {navItems.map((item) => (
             <Link
               key={item.path}
               href={item.path}
-              className={`text-sm font-medium transition ${
+              className={`text-xl font-medium transition ${
                 isActive(item.path)
-                  ? "text-gray-900 border-b-2 border-blue-600 pb-1"
-                  : "text-gray-900 hover:text-blue-600"
+                  ? "text-[#333D48] border-b-2 border-[#1866E1]"
+                  : "text-[#333D48]"
               }`}
             >
               {item.label}
@@ -36,8 +37,12 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
-          <span className="text-xs text-gray-600">1117</span>
+        <div className="flex items-center gap-3 pt-2">
+          <Profile />
+          <div className="flex flex-col justify-center">
+            <p className="text-xl font-medium text-[#333D48]">이름</p>
+            <p className="text-xl text-[#333D48]">학번</p>
+          </div>
         </div>
       </div>
     </header>
