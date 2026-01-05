@@ -28,8 +28,8 @@ export default function Header() {
               href={item.path}
               className={`text-xl font-medium transition ${
                 isActive(item.path)
-                  ? "text-[#333D48] border-b-2 border-[#1866E1]"
-                  : "text-[#333D48]"
+                  ? "text-gray-700 border-b-2 border-main-100"
+                  : "text-gray-700"
               }`}
             >
               {item.label}
@@ -40,11 +40,10 @@ export default function Header() {
         <div className="flex items-center gap-3 pt-2">
           <Profile />
           <div className="flex flex-col justify-center">
-            <p className="text-xl font-medium text-[#333D48]">이름</p>
-            <p className="text-xl text-[#333D48]">학번</p>
+            <p className="text-xl font-medium text-gray-700">0000 OO</p>
           </div>
         </div>
       </div>
     </header>
-  );
+  );  
 }

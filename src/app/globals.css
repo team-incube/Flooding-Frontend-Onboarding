@@ -3,7 +3,9 @@
 @theme {
   --font-family-sans: Pretendard, sans-serif;
 
-  --color-main: #1866E1;
+  --color-main-100: #1866E1;
+
+  --color-gray-700: #333D48;
 }
 
 
