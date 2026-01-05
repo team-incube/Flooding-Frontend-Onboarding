@@ -2,13 +2,13 @@ import React from "react";
 import TableButton from "./TableButton";
 
 interface Floor2Props {
-  selectedTable: string | null;
-  setSelectedTable: (table: string) => void;
+  table: string | null;
+  onTable: (table: string) => void;
 }
 
 export default function Floor2({
-  selectedTable,
-  setSelectedTable,
+  table,
+  onTable,
 }: Floor2Props) {
   return (
     <>
@@ -16,8 +16,8 @@ export default function Floor2({
         <TableButton
           name="Table 1"
           seats={6}
-          isSelected={selectedTable === "Table 1"}
-          onClick={() => setSelectedTable("Table 1")}
+          isSelected={table === "Table 1"}
+          onClick={() => onTable("Table 1")}
         />
       </div>
       <div className="w-8 bg-[#D1D8DE] rounded-lg"></div>
@@ -25,14 +25,14 @@ export default function Floor2({
         <TableButton
           name="Table 2"
           seats={4}
-          isSelected={selectedTable === "Table 2"}
-          onClick={() => setSelectedTable("Table 2")}
+          isSelected={table === "Table 2"}
+          onClick={() => onTable("Table 2")}
         />
         <TableButton
           name="Table 3"
           seats={4}
-          isSelected={selectedTable === "Table 3"}
-          onClick={() => setSelectedTable("Table 3")}
+          isSelected={table === "Table 3"}
+          onClick={() => onTable("Table 3")}
         />
       </div>
     </>
