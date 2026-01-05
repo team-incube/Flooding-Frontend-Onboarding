@@ -1,31 +1,8 @@
 "use client";
 
 import Header from "@/widgets/header/ui";
+import { getTablesByFloor } from "@/features/homebase/lib/tableData";
 import { useState } from "react";
-
-const getTablesByFloor = (floor: string) => {
-  const floorTables: { [key: string]: { name: string; seats: number }[] } = {
-    "2층": [
-      { name: "Table 1", seats: 6 },
-      { name: "Table 2", seats: 4 },
-      { name: "Table 3", seats: 4 },
-    ],
-    "3층": [
-      { name: "Table 1", seats: 4 },
-      { name: "Table 2", seats: 4 },
-      { name: "Table 3", seats: 6 },
-      { name: "Table 4", seats: 4 },
-      { name: "Table 5", seats: 6 },
-    ],
-    "4층": [
-      { name: "Table 1", seats: 4 },
-      { name: "Table 2", seats: 4 },
-      { name: "Table 3", seats: 6 },
-      { name: "Table 4", seats: 4 },
-    ],
-  };
-  return floorTables[floor] || [];
-};
 
 export default function HomebasePage() {
   const [selectedFloor, setSelectedFloor] = useState<string | null>(null);
