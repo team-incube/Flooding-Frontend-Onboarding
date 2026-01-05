@@ -3,12 +3,10 @@
 @theme {
   --font-family-sans: Pretendard, sans-serif;
 
-  --color-main-100: #1866E1;
+  --color-main-100: #1866e1;
 
-  --color-gray-700: #333D48;
+  --color-gray-700: #333d48;
 }
-
-
 
 body {
   font-family: Pretendard, sans-serif;
