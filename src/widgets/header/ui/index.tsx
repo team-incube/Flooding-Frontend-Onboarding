@@ -40,7 +40,7 @@ export default function Header() {
         <div className="flex items-center gap-3 pt-2">
           <Profile />
           <div className="flex flex-col justify-center">
-            <p className="text-xl font-medium text-gray-700">0000 OO</p>
+            <p className="text-xl font-medium text-gray-700">1234 이름</p>
           </div>
         </div>
       </div>
