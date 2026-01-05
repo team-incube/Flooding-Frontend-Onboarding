@@ -2,7 +2,11 @@
 
 @theme {
   --font-family-sans: Pretendard, sans-serif;
+
+  --color-main: #1866E1;
 }
+
+
 
 body {
   font-family: Pretendard, sans-serif;
