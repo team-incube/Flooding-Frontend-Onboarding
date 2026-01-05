@@ -18,7 +18,7 @@ export default function TableButton({
   return (
     <button
       onClick={onClick}
-      className={`${flexClass} p-5 rounded-xl border-1 flex flex-col items-start justify-start cursor-pointer ${
+      className={`${flexClass} p-5 rounded-xl border flex flex-col items-start justify-start cursor-pointer ${
         isSelected
           ? "border-main-100 bg-blue-50"
           : "border-[#E0E4E9]"
