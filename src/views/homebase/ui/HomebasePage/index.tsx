@@ -237,10 +237,10 @@ export default function HomebasePage() {
                     <div className="flex gap-3 flex-1 h-full">
                       <button
                         onClick={() => setSelectedTable("Table 1")}
-                        className={`flex-1 p-5 rounded-xl border-2 transition-all flex flex-col items-start justify-start ${
+                        className={`flex-1 p-5 rounded-xl border-1 transition-all flex flex-col items-start justify-start ${
                           selectedTable === "Table 1"
                             ? "border-main-100 bg-blue-50"
-                            : "border-[#E0E4E9] hover:border-[#D1D8DE]"
+                            : "border-[#E0E4E9]"
                         }`}
                       >
                         <p
