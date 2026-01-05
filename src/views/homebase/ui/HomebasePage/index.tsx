@@ -18,7 +18,7 @@ export default function HomebasePage() {
             <div className="space-y-5">
               <button
                 onClick={() => setSelectedFloor("2층")}
-                className={`w-full px-4 py-3 border rounded-lg text-base transition-colors text-left ${
+                className={`w-full px-4 py-3 border rounded-lg text-base transition-colors text-left cursor-pointer ${
                   selectedFloor === "2층"
                     ? "border-[#D1D8DE] bg-main-100 text-white"
                     : "border-[#D1D8DE] text-gray-700 hover:bg-gray-50"
@@ -28,7 +28,7 @@ export default function HomebasePage() {
               </button>
               <button
                 onClick={() => setSelectedFloor("3층")}
-                className={`w-full px-4 py-3 border rounded-lg text-base transition-colors text-left ${
+                className={`w-full px-4 py-3 border rounded-lg text-base transition-colors text-left cursor-pointer ${
                   selectedFloor === "3층"
                     ? "border-[#D1D8DE] bg-main-100 text-white"
                     : "border-[#D1D8DE] text-gray-700 hover:bg-gray-50"
@@ -38,7 +38,7 @@ export default function HomebasePage() {
               </button>
               <button
                 onClick={() => setSelectedFloor("4층")}
-                className={`w-full px-4 py-3 border rounded-lg text-base transition-colors text-left ${
+                className={`w-full px-4 py-3 border rounded-lg text-base transition-colors text-left cursor-pointer ${
                   selectedFloor === "4층"
                     ? "border-[#D1D8DE] bg-main-100 text-white"
                     : "border-[#D1D8DE] text-gray-700 hover:bg-gray-50"
@@ -56,7 +56,7 @@ export default function HomebasePage() {
                 <button
                   key={classTime}
                   onClick={() => setSelectedClass(classTime)}
-                  className={`px-4 py-3 border rounded-lg text-base transition-colors  text-left ${
+                  className={`px-4 py-3 border rounded-lg text-base transition-colors  text-left cursor-pointer ${
                     selectedClass === classTime
                       ? "border-[#D1D8DE] bg-main-100 text-white"
                       : "border-[#D1D8DE] text-gray-700 hover:bg-gray-50"
@@ -78,7 +78,7 @@ export default function HomebasePage() {
                     <div className="flex-1 flex flex-col gap-4">
                       <button
                         onClick={() => setSelectedTable("Table 1")}
-                        className={`flex-1 p-5 rounded-xl border-1 transition-all text-left h-full flex flex-col justify-start ${
+                        className={`flex-1 p-5 rounded-xl border-1 text-left h-full flex flex-col justify-start cursor-pointer ${
                           selectedTable === "Table 1"
                             ? "border-main-100 bg-blue-50"
                             : "border-[#E0E4E9] "
@@ -96,7 +96,7 @@ export default function HomebasePage() {
                     <div className="flex-1 flex flex-col gap-4 h-full">
                       <button
                         onClick={() => setSelectedTable("Table 2")}
-                        className={`flex-1 p-5 rounded-xl border-1 transition-all flex flex-col items-start justify-start ${
+                        className={`flex-1 p-5 rounded-xl border-1 flex flex-col items-start justify-start cursor-pointer ${
                           selectedTable === "Table 2"
                             ? "border-main-100 bg-blue-50"
                             : "border-[#D1D8DE]"
@@ -111,7 +111,7 @@ export default function HomebasePage() {
                       </button>
                       <button
                         onClick={() => setSelectedTable("Table 3")}
-                        className={`flex-1 p-5 rounded-xl border-1 transition-all flex flex-col items-start justify-start ${
+                        className={`flex-1 p-5 rounded-xl border-1 flex flex-col items-start justify-start cursor-pointer ${
                           selectedTable === "Table 3"
                             ? "border-main-100 bg-blue-50"
                             : "border-[#E0E4E9] "
@@ -131,7 +131,7 @@ export default function HomebasePage() {
                     <div className="flex gap-3 flex-1 h-full">
                       <button
                         onClick={() => setSelectedTable("Table 1")}
-                        className={`flex-1 p-5 rounded-xl border-1 transition-all flex flex-col items-start justify-start ${
+                        className={`flex-1 p-5 rounded-xl border-1 flex flex-col items-start justify-start cursor-pointer ${
                           selectedTable === "Table 1"
                             ? "border-main-100 bg-blue-50"
                             : "border-[#E0E4E9] "
@@ -147,7 +147,7 @@ export default function HomebasePage() {
                       <div className="w-8 bg-[#D1D8DE] rounded-lg"></div>
                       <button
                         onClick={() => setSelectedTable("Table 2")}
-                        className={`flex-1 p-5 rounded-xl border-1 transition-all flex flex-col items-start justify-start ${
+                        className={`flex-1 p-5 rounded-xl border-1 flex flex-col items-start justify-start cursor-pointer cursor-pointer ${
                           selectedTable === "Table 2"
                             ? "border-main-100 bg-blue-50"
                             : "border-[#E0E4E9] "
@@ -164,7 +164,7 @@ export default function HomebasePage() {
                     <div className="flex gap-4 flex-1 h-full">
                       <button
                         onClick={() => setSelectedTable("Table 3")}
-                        className={`flex-1 p-5 rounded-xl border-1 transition-all flex flex-col items-start justify-start ${
+                        className={`flex-1 p-5 rounded-xl border-1 flex flex-col items-start justify-start cursor-pointer cursor-pointer ${
                           selectedTable === "Table 3"
                             ? "border-main-100 bg-blue-50"
                             : "border-[#E0E4E9]"
@@ -179,7 +179,7 @@ export default function HomebasePage() {
                       </button>
                       <button
                         onClick={() => setSelectedTable("Table 4")}
-                        className={`flex-1 p-5 rounded-xl border-1 transition-all flex flex-col items-start justify-start ${
+                        className={`flex-1 p-5 rounded-xl border-1 flex flex-col items-start justify-start cursor-pointer cursor-pointer ${
                           selectedTable === "Table 4"
                             ? "border-main-100 bg-blue-50"
                             : "border-[#E0E4E9] "
@@ -194,7 +194,7 @@ export default function HomebasePage() {
                       </button>
                       <button
                         onClick={() => setSelectedTable("Table 5")}
-                        className={`flex-1 p-5 rounded-xl border-1 transition-all flex flex-col items-start justify-start ${
+                        className={`flex-1 p-5 rounded-xl border-1 flex flex-col items-start justify-start cursor-pointer cursor-pointer ${
                           selectedTable === "Table 5"
                             ? "border-main-100 bg-blue-50"
                             : "border-[#E0E4E9] "
@@ -214,7 +214,7 @@ export default function HomebasePage() {
                     <div className="flex gap-3 flex-1 h-full">
                       <button
                         onClick={() => setSelectedTable("Table 1")}
-                        className={`flex-1 p-5 rounded-xl border-1 transition-all flex flex-col items-start justify-start ${
+                        className={`flex-1 p-5 rounded-xl border-1 flex flex-col items-start justify-start cursor-pointer ${
                           selectedTable === "Table 1"
                             ? "border-main-100 bg-blue-50"
                             : "border-[#E0E4E9]"
@@ -230,7 +230,7 @@ export default function HomebasePage() {
                       <div className="w-8 bg-[#D1D8DE] rounded-lg"></div>
                       <button
                         onClick={() => setSelectedTable("Table 2")}
-                        className={`flex-1 p-5 rounded-xl border-1 transition-all flex flex-col items-start justify-start ${
+                        className={`flex-1 p-5 rounded-xl border-1 flex flex-col items-start justify-start cursor-pointer cursor-pointer ${
                           selectedTable === "Table 2"
                             ? "border-main-100 bg-blue-50"
                             : "border-[#E0E4E9] "
@@ -247,7 +247,7 @@ export default function HomebasePage() {
                     <div className="flex gap-3 flex-1 h-full">
                       <button
                         onClick={() => setSelectedTable("Table 3")}
-                        className={`flex-[1.2] p-5 rounded-xl border-1 transition-all flex flex-col items-start justify-start ${
+                        className={`flex-[1.2] p-5 rounded-xl border-1 flex flex-col items-start justify-start cursor-pointer cursor-pointer ${
                           selectedTable === "Table 3"
                             ? "border-main-100 bg-blue-50"
                             : "border-[#E0E4E9] "
@@ -262,7 +262,7 @@ export default function HomebasePage() {
                       </button>
                       <button
                         onClick={() => setSelectedTable("Table 4")}
-                        className={`flex-1 p-5 rounded-xl border-1 transition-all flex flex-col items-start justify-start ${
+                        className={`flex-1 p-5 rounded-xl border-1 flex flex-col items-start justify-start cursor-pointer cursor-pointer ${
                           selectedTable === "Table 4"
                             ? "border-main-100 bg-blue-50"
                             : "border-[#E0E4E9] "
@@ -282,7 +282,7 @@ export default function HomebasePage() {
                     <button
                       key={table.name}
                       onClick={() => setSelectedTable(table.name)}
-                      className={`flex-1 p-4 rounded-lg border-1 transition-all flex flex-col items-start justify-start ${
+                      className={`flex-1 p-4 rounded-lg border-1 flex flex-col items-start justify-start cursor-pointer ${
                         selectedTable === table.name
                           ? "border-main-100 bg-blue-50"
                           : "border-[#E0E4E9] "
