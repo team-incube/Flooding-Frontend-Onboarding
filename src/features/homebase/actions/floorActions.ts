@@ -131,3 +131,22 @@ export async function fetchStudents(): Promise<Student[]> {
     return [];
   }
 }
+
+export async function saveTableSelection(
+  floor: string,
+  classTime: string,
+  table: string
+) {
+  try {
+    await axios.post(`${API_BASE_URL}/homebases`, {
+      floor,
+      classTime,
+      table,
+      timestamp: new Date().toISOString(),
+    });
+
+    return { success: true };
+  } catch {
+    return { success: false };
+  }
+}
