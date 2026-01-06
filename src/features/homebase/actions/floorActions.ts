@@ -2,6 +2,8 @@
 
 import axios from "axios";
 
+const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:3001";
+
 interface FloorData {
   floor: string;
   classTime: string;
@@ -22,7 +24,7 @@ export async function saveFloorSelection(
 ): Promise<ApiResponse> {
   try {
     const response = await axios.post(
-      "http://localhost:3001/homebases",
+      `${API_BASE_URL}/homebases`,
       {
         floor,
         classTime,
@@ -48,7 +50,7 @@ export async function saveFloorSelection(
 export async function fetchFloorTableData(floor: string): Promise<ApiResponse> {
   try {
     const response = await axios.get(
-      `http://localhost:3001/floors/${floor}/tables`
+      `${API_BASE_URL}/floors/${floor}/tables`
     );
 
     return {

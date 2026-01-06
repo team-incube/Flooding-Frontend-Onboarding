@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
 
+const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:3001";
+
 interface SaveData {
   floor: string;
   classTime: string;
@@ -12,7 +14,7 @@ export async function POST(req: NextRequest) {
     const body: SaveData = await req.json();
 
     const response = await axios.post(
-      "http://localhost:3001/homebases",
+      `${API_BASE_URL}/homebases`,
       {
         floor: body.floor,
         classTime: body.classTime,
