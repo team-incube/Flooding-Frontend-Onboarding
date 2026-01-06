@@ -5,115 +5,59 @@ import Sidebar from "@/features/homebase/ui/Sidebar";
 import Floor2Layout from "@/features/homebase/ui/Floor2";
 import Floor3Layout from "@/features/homebase/ui/Floor3";
 import Floor4Layout from "@/features/homebase/ui/Floor4";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import {
+  fetchAppliedTables,
+  saveTableSelection,
+} from "@/features/homebase/actions/floorActions";
+import { getTablesByFloor } from "@/features/homebase/lib/tableData";
 import {
   isValidFloor,
   isValidClassTime,
 } from "@/features/homebase/lib/constants";
-
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
+import ApplicationBar from "@/features/homebase/ui/Applicationbar";
 
 export default function HomebasePage() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const [floor, setFloor] = useState<string | null>(null);
-  const [time, setTime] = useState<string | null>(null);
-  const [table, setTable] = useState<string | null>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const handleApplySuccess = (appliedTable: string) => {
+    setDisabledTables((prev) =>
+      prev.includes(appliedTable) ? prev : [...prev, appliedTable]
+    );
+    setShowApplicationBar(false);
+  };
 
-  // URL 포맷 변환 함수
+  const floor = useMemo(() => {
+    const f = searchParams.get("floor");
+    return f ? `${f}층` : null;
+  }, [searchParams]);
+
+  const time = useMemo(() => {
+    const t = searchParams.get("time");
+    return t ? `${t}교시` : null;
+  }, [searchParams]);
+
+  const table = useMemo(() => {
+    const tb = searchParams.get("table");
+    return tb ? `Table ${tb}` : null;
+  }, [searchParams]);
+
+  const [disabledTables, setDisabledTables] = useState<string[]>([]);
+  const [showApplicationBar, setShowApplicationBar] = useState(false);
+
+  // URL 업데이트
   const toUrlFormat = (
     floor: string | null,
     time: string | null,
     table: string | null
-  ) => {
-    return {
-      floor: floor ? floor.replace("층", "") : null,
-      time: time ? time.replace("교시", "") : null,
-      table: table ? table.replace("Table ", "") : null,
-    };
-  };
+  ) => ({
+    floor: floor ? floor.replace("층", "") : null,
+    time: time ? time.replace("교시", "") : null,
+    table: table ? table.replace("Table ", "") : null,
+  });
 
-  const fromUrlFormat = (
-    floorNum: string | null,
-    timeNum: string | null,
-    tableNum: string | null
-  ) => {
-    return {
-      floor: floorNum ? `${floorNum}층` : null,
-      time: timeNum ? `${timeNum}교시` : null,
-      table: tableNum ? `Table ${tableNum}` : null,
-    };
-  };
-
-  // URL에서 초기값 로드
-  useEffect(() => {
-    const floorParam = searchParams.get("floor");
-    const timeParam = searchParams.get("time");
-    const tableParam = searchParams.get("table");
-
-    const formatted = fromUrlFormat(floorParam, timeParam, tableParam);
-    setFloor(formatted.floor);
-    setTime(formatted.time);
-    setTable(formatted.table);
-    setIsLoaded(true);
-  }, [searchParams]);
-
-  // 층수 변경 (테이블 초기화)
-  const handleFloorChange = (newFloor: string) => {
-    setFloor(newFloor);
-    setTable(null);
-    updateUrl(newFloor, time, null);
-  };
-
-  // 교시 변경
-  const handleTimeChange = (newTime: string) => {
-    setTime(newTime);
-    updateUrl(floor, newTime, table);
-  };
-
-  // 테이블 저장 및 상태 변경
-  const handleTableChange = async (newTable: string) => {
-    setTable(newTable);
-    updateUrl(floor, time, newTable);
-
-    // 유효한 층수와 교시인 경우에만 저장
-    if (floor && time && isValidFloor(floor) && isValidClassTime(time)) {
-      await saveTableSelection(floor, time, newTable);
-    }
-  };
-
-  // 테이블 선택 저장 (Route Handler 호출)
-  const saveTableSelection = async (
-    floor: string,
-    classTime: string,
-    table: string
-  ) => {
-    try {
-      const response = await fetch(`${API_BASE_URL}/api/homebase`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          floor,
-          classTime,
-          table,
-        }),
-      });
-
-      if (!response.ok) {
-        console.error("테이블 저장 실패:", response.statusText);
-      }
-    } catch (error) {
-      console.error("테이블 저장 중 오류:", error);
-    }
-  };
-
-  // URL 업데이트
   const updateUrl = (f: string | null, t: string | null, tb: string | null) => {
     const formatted = toUrlFormat(f, t, tb);
     const params = new URLSearchParams();
@@ -125,46 +69,103 @@ export default function HomebasePage() {
     router.push(queryString ? `?${queryString}` : "/homebase");
   };
 
-  if (!isLoaded) return null;
+  const handleFloorChange = (newFloor: string) => {
+    updateUrl(newFloor, time, null);
+    setShowApplicationBar(false);
+  };
+
+  const handleTimeChange = (newTime: string) => {
+    updateUrl(floor, newTime, table);
+    setShowApplicationBar(false);
+  };
+
+  const handleTableChange = async (newTable: string) => {
+    updateUrl(floor, time, newTable);
+    setShowApplicationBar(true);
+
+    if (floor && time && isValidFloor(floor) && isValidClassTime(time)) {
+      await saveTableSelection(floor, time, newTable);
+    }
+  };
+
+  useEffect(() => {
+    if (!floor || !time) return;
+    fetchAppliedTables(floor, time).then(setDisabledTables);
+  }, [floor, time]);
+
+  const maxPeople = useMemo(() => {
+    if (!floor || !table) return 0;
+    const tables = getTablesByFloor(floor);
+    const found = tables.find((t) => t.name === table);
+    return found?.seats ?? 0;
+  }, [floor, table]);
+
+  const handleCancelApplication = () => {
+    setShowApplicationBar(false);
+  };
+
   return (
     <div className="min-h-screen bg-[#F8F9FB]">
       <Header />
-      <div className="max-w-375 mx-auto px-10 py-9 flex gap-8">
-        <Sidebar
-          floor={floor}
-          time={time}
-          onFloor={handleFloorChange}
-          onTime={handleTimeChange}
-        />
-        {}
-        <div className="flex-1 flex flex-col bg-white rounded-2xl p-6">
-          {floor && time ? (
-            <>
+      <div className="min-h-[calc(100vh-118px)] flex items-center justify-center">
+        <div className="max-w-[1552px] w-full flex gap-8">
+          <Sidebar
+            floor={floor}
+            time={time}
+            onFloor={handleFloorChange}
+            onTime={handleTimeChange}
+          />
+          <div className="flex-1 h-130 flex flex-col bg-white rounded-2xl p-6">
+            {floor && time ? (
               <div className="flex gap-3 h-full">
                 {floor === "2층" && (
-                  <Floor2Layout table={table} onTable={handleTableChange} />
+                  <Floor2Layout
+                    table={table}
+                    onTable={handleTableChange}
+                    disabledTables={disabledTables}
+                  />
                 )}
                 {floor === "3층" && (
-                  <Floor3Layout table={table} onTable={handleTableChange} />
+                  <Floor3Layout
+                    table={table}
+                    onTable={handleTableChange}
+                    disabledTables={disabledTables}
+                  />
                 )}
                 {floor === "4층" && (
-                  <Floor4Layout table={table} onTable={handleTableChange} />
+                  <Floor4Layout
+                    table={table}
+                    onTable={handleTableChange}
+                    disabledTables={disabledTables}
+                  />
                 )}
               </div>
-            </>
+            ) : (
+              <div className="flex items-center justify-center h-full">
+                <p className="text-gray-700 text-lg font-bold">
+                  층수와 교시를 선택해주세요.
+                </p>
+              </div>
+            )}
+          </div>
+
+          {showApplicationBar && floor && time && table ? (
+            <ApplicationBar
+              floor={floor}
+              time={time}
+              table={table}
+              maxPeople={maxPeople}
+              myName="1234 이름"
+              onCancel={handleCancelApplication} // ApplicationBar만 닫힘
+              onSuccess={() => handleApplySuccess(table)}
+            />
           ) : (
-            <div className="flex items-center justify-center h-full">
+            <div className="w-90 flex items-center justify-center bg-white rounded-2xl">
               <p className="text-gray-700 text-lg font-bold">
-                층수와 교시를 선택해주세요.
+                테이블을 선택해주세요.
               </p>
             </div>
           )}
-        </div>
-        {}
-        <div className="w-80 flex items-center justify-center bg-white rounded-2xl">
-          <p className="text-gray-700 text-lg font-bold">
-            테이블을 선택해주세요.
-          </p>
         </div>
       </div>
     </div>
