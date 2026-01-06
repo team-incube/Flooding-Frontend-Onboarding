@@ -166,11 +166,631 @@
       "timestamp": "2026-01-06T05:20:32.478Z"
     },
     {
-      "id": "9561", 
+      "id": "9561",
       "floor": "2층",
       "classTime": "12교시",
       "table": "Table 2",
       "timestamp": "2026-01-06T05:20:32.747Z"
+    },
+    {
+      "id": "6eea",
+      "floor": "3층",
+      "classTime": "11교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T14:07:42.264Z"
+    },
+    {
+      "id": "a7ac",
+      "floor": "3층",
+      "classTime": "11교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T14:09:17.990Z"
+    },
+    {
+      "id": "c249",
+      "floor": "3층",
+      "classTime": "11교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T14:09:18.938Z"
+    },
+    {
+      "id": "fe81",
+      "floor": "3층",
+      "classTime": "11교시",
+      "table": "Table 4",
+      "timestamp": "2026-01-06T14:09:19.402Z"
+    },
+    {
+      "id": "7600",
+      "floor": "3층",
+      "classTime": "11교시",
+      "table": "Table 5",
+      "timestamp": "2026-01-06T14:09:19.793Z"
+    },
+    {
+      "id": "abb5",
+      "floor": "2층",
+      "classTime": "9교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T14:09:28.916Z"
+    },
+    {
+      "id": "252e",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T14:09:44.026Z"
+    },
+    {
+      "id": "4b78",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 2",
+      "members": [
+        "ㄴㄴ4"
+      ],
+      "reason": "ㅇㅇ",
+      "timestamp": "2026-01-06T14:26:06.712Z"
+    },
+    {
+      "id": "9189",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 5",
+      "timestamp": "2026-01-06T14:26:10.015Z"
+    },
+    {
+      "id": "cb5d",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T14:26:10.665Z"
+    },
+    {
+      "id": "4484",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 2",
+      "members": [
+        "ㄴㄴ4"
+      ],
+      "reason": "ㅇㅇ",
+      "timestamp": "2026-01-06T14:26:12.400Z"
+    },
+    {
+      "id": "4ccf",
+      "floor": "4층",
+      "classTime": "9교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T14:51:45.017Z"
+    },
+    {
+      "id": "f90c",
+      "floor": "4층",
+      "classTime": "9교시",
+      "table": "Table 1",
+      "members": [
+        "12"
+      ],
+      "reason": "안녕",
+      "timestamp": "2026-01-06T14:52:02.736Z"
+    },
+    {
+      "id": "cb8a",
+      "floor": "4층",
+      "classTime": "9교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T14:52:05.741Z"
+    },
+    {
+      "id": "5789",
+      "floor": "4층",
+      "classTime": "9교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T14:52:06.743Z"
+    },
+    {
+      "id": "0b5d",
+      "floor": "4층",
+      "classTime": "9교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T14:52:15.890Z"
+    },
+    {
+      "id": "1c42",
+      "floor": "4층",
+      "classTime": "9교시",
+      "table": "Table 2",
+      "members": [
+        "12",
+        "313",
+        "13",
+        "24"
+      ],
+      "reason": "안녕",
+      "timestamp": "2026-01-06T14:52:31.121Z"
+    },
+    {
+      "id": "39d4",
+      "floor": "4층",
+      "classTime": "9교시",
+      "table": "Table 4",
+      "timestamp": "2026-01-06T14:52:34.247Z"
+    },
+    {
+      "id": "3dd0",
+      "floor": "4층",
+      "classTime": "9교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T14:52:34.722Z"
+    },
+    {
+      "id": "a2d2",
+      "floor": "4층",
+      "classTime": "11교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T14:55:43.026Z"
+    },
+    {
+      "id": "3042",
+      "floor": "4층",
+      "classTime": "11교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T15:05:51.774Z"
+    },
+    {
+      "id": "9ff3",
+      "floor": "4층",
+      "classTime": "11교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:05:56.190Z"
+    },
+    {
+      "id": "e172",
+      "floor": "4층",
+      "classTime": "11교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T15:05:57.182Z"
+    },
+    {
+      "id": "cbd4",
+      "floor": "4층",
+      "classTime": "8교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:06:08.315Z"
+    },
+    {
+      "id": "ed4c",
+      "floor": "2층",
+      "classTime": "9교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T15:11:00.804Z"
+    },
+    {
+      "id": "b457",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 4",
+      "timestamp": "2026-01-06T15:11:29.384Z"
+    },
+    {
+      "id": "3f63",
+      "floor": "3층",
+      "classTime": "8교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:11:41.735Z"
+    },
+    {
+      "id": "860c",
+      "floor": "3층",
+      "classTime": "8교시",
+      "table": "Table 4",
+      "timestamp": "2026-01-06T15:11:43.371Z"
+    },
+    {
+      "id": "0db3",
+      "floor": "3층",
+      "classTime": "8교시",
+      "table": "Table 5",
+      "timestamp": "2026-01-06T15:11:44.523Z"
+    },
+    {
+      "id": "6009",
+      "floor": "3층",
+      "classTime": "8교시",
+      "table": "Table 4",
+      "timestamp": "2026-01-06T15:11:45.970Z"
+    },
+    {
+      "id": "ff12",
+      "floor": "3층",
+      "classTime": "8교시",
+      "table": "Table 5",
+      "timestamp": "2026-01-06T15:12:10.171Z"
+    },
+    {
+      "id": "c72c",
+      "floor": "3층",
+      "classTime": "8교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T15:12:11.085Z"
+    },
+    {
+      "id": "ed3f",
+      "floor": "3층",
+      "classTime": "8교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:12:11.808Z"
+    },
+    {
+      "id": "a45f",
+      "floor": "3층",
+      "classTime": "8교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:12:12.579Z"
+    },
+    {
+      "id": "5fcd",
+      "floor": "3층",
+      "classTime": "8교시",
+      "table": "Table 4",
+      "timestamp": "2026-01-06T15:12:13.139Z"
+    },
+    {
+      "id": "8bbf",
+      "floor": "3층",
+      "classTime": "8교시",
+      "table": "Table 5",
+      "timestamp": "2026-01-06T15:12:13.540Z"
+    },
+    {
+      "id": "e0a6",
+      "floor": "4층",
+      "classTime": "8교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:12:15.369Z"
+    },
+    {
+      "id": "f485",
+      "floor": "4층",
+      "classTime": "8교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T15:12:16.330Z"
+    },
+    {
+      "id": "bb34",
+      "floor": "4층",
+      "classTime": "8교시",
+      "table": "Table 4",
+      "timestamp": "2026-01-06T15:12:17.267Z"
+    },
+    {
+      "id": "cc8d",
+      "floor": "4층",
+      "classTime": "10교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:12:21.717Z"
+    },
+    {
+      "id": "7d0b",
+      "floor": "2층",
+      "classTime": "10교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:12:24.600Z"
+    },
+    {
+      "id": "9178",
+      "floor": "2층",
+      "classTime": "10교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T15:12:25.325Z"
+    },
+    {
+      "id": "3848",
+      "floor": "2층",
+      "classTime": "10교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:12:26.022Z"
+    },
+    {
+      "id": "e683",
+      "floor": "3층",
+      "classTime": "10교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:12:27.517Z"
+    },
+    {
+      "id": "bc6e",
+      "floor": "3층",
+      "classTime": "10교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T15:12:28.196Z"
+    },
+    {
+      "id": "286e",
+      "floor": "3층",
+      "classTime": "10교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:12:29.027Z"
+    },
+    {
+      "id": "883c",
+      "floor": "3층",
+      "classTime": "10교시",
+      "table": "Table 4",
+      "timestamp": "2026-01-06T15:12:29.404Z"
+    },
+    {
+      "id": "07f0",
+      "floor": "3층",
+      "classTime": "10교시",
+      "table": "Table 5",
+      "timestamp": "2026-01-06T15:12:29.862Z"
+    },
+    {
+      "id": "4948",
+      "floor": "4층",
+      "classTime": "10교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:12:31.442Z"
+    },
+    {
+      "id": "cb1b",
+      "floor": "4층",
+      "classTime": "10교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T15:12:31.948Z"
+    },
+    {
+      "id": "759a",
+      "floor": "4층",
+      "classTime": "10교시",
+      "table": "Table 4",
+      "timestamp": "2026-01-06T15:12:32.313Z"
+    },
+    {
+      "id": "013b",
+      "floor": "2층",
+      "classTime": "8교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:20:12.943Z"
+    },
+    {
+      "id": "c3d2",
+      "floor": "2층",
+      "classTime": "8교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T15:20:16.053Z"
+    },
+    {
+      "id": "4236",
+      "floor": "2층",
+      "classTime": "8교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:20:16.855Z"
+    },
+    {
+      "id": "8431",
+      "floor": "2층",
+      "classTime": "8교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:20:17.505Z"
+    },
+    {
+      "id": "30a3",
+      "floor": "2층",
+      "classTime": "8교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:20:19.917Z"
+    },
+    {
+      "id": "53bc",
+      "floor": "2층",
+      "classTime": "8교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T15:20:20.649Z"
+    },
+    {
+      "id": "537a",
+      "floor": "2층",
+      "classTime": "8교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:21:23.296Z"
+    },
+    {
+      "id": "f425",
+      "floor": "2층",
+      "classTime": "8교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:23:44.570Z"
+    },
+    {
+      "id": "9371",
+      "floor": "2층",
+      "classTime": "8교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T15:23:46.035Z"
+    },
+    {
+      "id": "be0d",
+      "floor": "2층",
+      "classTime": "9교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:28:28.653Z"
+    },
+    {
+      "id": "bc33",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:28:43.009Z"
+    },
+    {
+      "id": "9a8b",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:29:54.411Z"
+    },
+    {
+      "id": "309e",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:29:55.302Z"
+    },
+    {
+      "id": "9e98",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:29:56.328Z"
+    },
+    {
+      "id": "750a",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:29:57.436Z"
+    },
+    {
+      "id": "df59",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:35:27.397Z"
+    },
+    {
+      "id": "eb9c",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:35:28.365Z"
+    },
+    {
+      "id": "a147",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:35:28.947Z"
+    },
+    {
+      "id": "8bb8",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:35:29.481Z"
+    },
+    {
+      "id": "de47",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:35:29.943Z"
+    },
+    {
+      "id": "f3fd",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:35:30.536Z"
+    },
+    {
+      "id": "f6fc",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:35:31.102Z"
+    },
+    {
+      "id": "ebb8",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:35:43.093Z"
+    },
+    {
+      "id": "5599",
+      "floor": "3층",
+      "classTime": "9교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:35:43.781Z"
+    },
+    {
+      "id": "153e",
+      "floor": "2층",
+      "classTime": "11교시",
+      "table": "Table 1",
+      "timestamp": "2026-01-06T15:37:38.380Z"
+    },
+    {
+      "id": "d467",
+      "floor": "2층",
+      "classTime": "11교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:46:57.360Z"
+    },
+    {
+      "id": "5c14",
+      "floor": "2층",
+      "classTime": "11교시",
+      "table": "Table 3",
+      "timestamp": "2026-01-06T15:48:13.136Z"
+    },
+    {
+      "id": "1630",
+      "floor": "2층",
+      "classTime": "11교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T16:18:10.564Z"
+    },
+    {
+      "id": "70de",
+      "floor": "4층",
+      "classTime": "11교시",
+      "table": "Table 4",
+      "timestamp": "2026-01-06T16:28:05.003Z"
+    },
+    {
+      "id": "8942",
+      "floor": "2층",
+      "classTime": "11교시",
+      "table": "Table 2",
+      "timestamp": "2026-01-06T16:48:59.004Z"
+    }
+  ],
+  "students": [
+    {
+      "id": "1201",
+      "name": "김지유"
+    },
+    {
+      "id": "1202",
+      "name": "배순우"
+    },
+    {
+      "id": "1203",
+      "name": "문강현"
+    },
+    {
+      "id": "1204",
+      "name": "강우빈"
+    },
+    {
+      "id": "1205",
+      "name": "정연돈"
+    },
+    {
+      "id": "1206",
+      "name": "배재현"
+    },
+    {
+      "id": "1207",
+      "name": "김준표"
+    },
+    {
+      "id": "1208",
+      "name": "이윤도"
     }
   ]
 }
