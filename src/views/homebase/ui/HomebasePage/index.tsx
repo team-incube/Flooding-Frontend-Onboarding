@@ -7,6 +7,9 @@ import Floor3Layout from "@/features/homebase/ui/Floor3";
 import Floor4Layout from "@/features/homebase/ui/Floor4";
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { FLOORS, CLASS_TIMES, isValidFloor, isValidClassTime } from "@/features/homebase/lib/constants";
+
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
 
 export default function HomebasePage() {
   const router = useRouter();
@@ -45,7 +48,7 @@ export default function HomebasePage() {
     setTime(formatted.time);
     setTable(formatted.table);
     setIsLoaded(true);
-  }, []);
+  }, [searchParams]);
 
   // 층수 변경 (테이블 초기화)
   const handleFloorChange = (newFloor: string) => {
@@ -60,10 +63,38 @@ export default function HomebasePage() {
     updateUrl(floor, newTime, table);
   };
 
-  // 테이블 변경
-  const handleTableChange = (newTable: string) => {
+  // 테이블 저장 및 상태 변경
+  const handleTableChange = async (newTable: string) => {
     setTable(newTable);
     updateUrl(floor, time, newTable);
+
+    // 유효한 층수와 교시인 경우에만 저장
+    if (isValidFloor(floor) && isValidClassTime(time)) {
+      await saveTableSelection(floor, time, newTable);
+    }
+  };
+
+  // 테이블 선택 저장 (Route Handler 호출)
+  const saveTableSelection = async (floor: string, classTime: string, table: string) => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/homebase`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          floor,
+          classTime,
+          table,
+        }),
+      });
+
+      if (!response.ok) {
+        console.error("테이블 저장 실패:", response.statusText);
+      }
+    } catch (error) {
+      console.error("테이블 저장 중 오류:", error);
+    }
   };
 
   // URL 업데이트
@@ -100,24 +131,18 @@ export default function HomebasePage() {
               <div className="flex gap-3 h-full">
                 {floor === "2층" && (
                   <Floor2Layout
-                    floor={floor}
-                    classTime={time || ""}
                     table={table}
                     onTable={handleTableChange}
                   />
                 )}
                 {floor === "3층" && (
                   <Floor3Layout
-                    floor={floor}
-                    classTime={time || ""}
                     table={table}
                     onTable={handleTableChange}
                   />
                 )}
                 {floor === "4층" && (
                   <Floor4Layout
-                    floor={floor}
-                    classTime={time || ""}
                     table={table}
                     onTable={handleTableChange}
                   />
