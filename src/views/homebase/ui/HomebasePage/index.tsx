@@ -7,9 +7,13 @@ import Floor3Layout from "@/features/homebase/ui/Floor3";
 import Floor4Layout from "@/features/homebase/ui/Floor4";
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { FLOORS, CLASS_TIMES, isValidFloor, isValidClassTime } from "@/features/homebase/lib/constants";
+import {
+  isValidFloor,
+  isValidClassTime,
+} from "@/features/homebase/lib/constants";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000";
 
 export default function HomebasePage() {
   const router = useRouter();
@@ -21,7 +25,11 @@ export default function HomebasePage() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   // URL 포맷 변환 함수
-  const toUrlFormat = (floor: string | null, time: string | null, table: string | null) => {
+  const toUrlFormat = (
+    floor: string | null,
+    time: string | null,
+    table: string | null
+  ) => {
     return {
       floor: floor ? floor.replace("층", "") : null,
       time: time ? time.replace("교시", "") : null,
@@ -29,7 +37,11 @@ export default function HomebasePage() {
     };
   };
 
-  const fromUrlFormat = (floorNum: string | null, timeNum: string | null, tableNum: string | null) => {
+  const fromUrlFormat = (
+    floorNum: string | null,
+    timeNum: string | null,
+    tableNum: string | null
+  ) => {
     return {
       floor: floorNum ? `${floorNum}층` : null,
       time: timeNum ? `${timeNum}교시` : null,
@@ -75,7 +87,11 @@ export default function HomebasePage() {
   };
 
   // 테이블 선택 저장 (Route Handler 호출)
-  const saveTableSelection = async (floor: string, classTime: string, table: string) => {
+  const saveTableSelection = async (
+    floor: string,
+    classTime: string,
+    table: string
+  ) => {
     try {
       const response = await fetch(`${API_BASE_URL}/api/homebase`, {
         method: "POST",
@@ -98,11 +114,7 @@ export default function HomebasePage() {
   };
 
   // URL 업데이트
-  const updateUrl = (
-    f: string | null,
-    t: string | null,
-    tb: string | null
-  ) => {
+  const updateUrl = (f: string | null, t: string | null, tb: string | null) => {
     const formatted = toUrlFormat(f, t, tb);
     const params = new URLSearchParams();
     if (formatted.floor) params.set("floor", formatted.floor);
@@ -130,22 +142,13 @@ export default function HomebasePage() {
             <>
               <div className="flex gap-3 h-full">
                 {floor === "2층" && (
-                  <Floor2Layout
-                    table={table}
-                    onTable={handleTableChange}
-                  />
+                  <Floor2Layout table={table} onTable={handleTableChange} />
                 )}
                 {floor === "3층" && (
-                  <Floor3Layout
-                    table={table}
-                    onTable={handleTableChange}
-                  />
+                  <Floor3Layout table={table} onTable={handleTableChange} />
                 )}
                 {floor === "4층" && (
-                  <Floor4Layout
-                    table={table}
-                    onTable={handleTableChange}
-                  />
+                  <Floor4Layout table={table} onTable={handleTableChange} />
                 )}
               </div>
             </>
