@@ -81,7 +81,7 @@ export default function HomebasePage() {
     updateUrl(floor, time, newTable);
 
     // 유효한 층수와 교시인 경우에만 저장
-    if (isValidFloor(floor) && isValidClassTime(time)) {
+    if (floor && time && isValidFloor(floor) && isValidClassTime(time)) {
       await saveTableSelection(floor, time, newTable);
     }
   };
