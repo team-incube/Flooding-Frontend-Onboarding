@@ -23,15 +23,12 @@ export async function saveFloorSelection(
   table: string
 ): Promise<ApiResponse> {
   try {
-    const response = await axios.post(
-      `${API_BASE_URL}/homebases`,
-      {
-        floor,
-        classTime,
-        table,
-        timestamp: new Date().toISOString(),
-      }
-    );
+    const response = await axios.post(`${API_BASE_URL}/homebases`, {
+      floor,
+      classTime,
+      table,
+      timestamp: new Date().toISOString(),
+    });
 
     return {
       success: true,
@@ -49,9 +46,7 @@ export async function saveFloorSelection(
 
 export async function fetchFloorTableData(floor: string): Promise<ApiResponse> {
   try {
-    const response = await axios.get(
-      `${API_BASE_URL}/floors/${floor}/tables`
-    );
+    const response = await axios.get(`${API_BASE_URL}/floors/${floor}/tables`);
 
     return {
       success: true,
