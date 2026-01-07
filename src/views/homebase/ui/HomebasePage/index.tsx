@@ -107,7 +107,7 @@ export default function HomebasePage() {
   return (
     <div className="min-h-screen bg-[#F8F9FB]">
       <Header />
-      <div className="min-h-[calc(100vh-118px)] flex items-center justify-center">
+      <div className="min-h-[calc(100vh-118px)] flex items-center justify-center p-10">
         <div className="max-w-[1552px] w-full flex gap-8">
           <Sidebar
             floor={floor}
