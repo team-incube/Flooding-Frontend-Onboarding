@@ -4,19 +4,13 @@
       "id": 1,
       "name": "INCUBE",
       "description": "후배들의 가능성을 보호·성장시켜 세상을 밝히는 인재로 길러내는 동아리",
-      "members": [
-        "한국",
-        "문강현"
-      ]
+      "members": ["한국", "문강현"]
     },
     {
       "id": 2,
       "name": "코디",
       "description": "개발하는 동아리",
-      "members": [
-        "배순우",
-        "강우빈"
-      ]
+      "members": ["배순우", "강우빈"]
     },
     {
       "id": 3,
@@ -28,10 +22,7 @@
       "id": 4,
       "name": "더모먼트",
       "description": "교내 프로젝트하는 동아리",
-      "members": [
-        "정연돈",
-        "배재현"
-      ]
+      "members": ["정연돈", "배재현"]
     },
     {
       "id": 5,
@@ -49,10 +40,7 @@
       "id": 7,
       "name": "게이미즘",
       "description": "게임 개발 동아리",
-      "members": [
-        "김준표",
-        "이윤도"
-      ]
+      "members": ["김준표", "이윤도"]
     }
   ],
   "musics": [
@@ -131,46 +119,65 @@
   ],
   "homebases": [
     {
-      "id": "c103",
-      "floor": "2층",
-      "classTime": "12교시",
+      "id": "hb-3f",
+      "floor": "3층",
+      "classTime": "9교시",
       "table": "Table 1",
-      "timestamp": "2026-01-06T05:20:30.305Z"
+      "members": ["김지유", "배순우"],
+      "reason": "팀 프로젝트 회의",
+      "timestamp": "2026-01-06T14:00:00.000Z"
     },
     {
-      "id": "5d05",
-      "floor": "2층",
-      "classTime": "12교시",
+      "id": "hb-4f",
+      "floor": "4층",
+      "classTime": "9교시",
       "table": "Table 3",
-      "timestamp": "2026-01-06T05:20:30.553Z"
+      "members": ["문강현"],
+      "reason": "개인 자습",
+      "timestamp": "2026-01-06T14:10:00.000Z"
     },
     {
-      "id": "dee0",
+      "id": "hb-5f",
       "floor": "2층",
-      "classTime": "12교시",
+      "classTime": "9교시",
       "table": "Table 2",
-      "timestamp": "2026-01-06T05:20:30.795Z"
+      "members": ["강우빈", "정연돈"],
+      "reason": "스터디",
+      "timestamp": "2026-01-06T14:20:00.000Z"
+    }
+  ],
+  "students": [
+    {
+      "id": "1201",
+      "name": "김지유"
     },
     {
-      "id": "d597",
-      "floor": "2층",
-      "classTime": "12교시",
-      "table": "Table 1",
-      "timestamp": "2026-01-06T05:20:32.129Z"
+      "id": "1202",
+      "name": "배순우"
     },
     {
-      "id": "ebd6",
-      "floor": "2층",
-      "classTime": "12교시",
-      "table": "Table 3",
-      "timestamp": "2026-01-06T05:20:32.478Z"
+      "id": "1203",
+      "name": "문강현"
     },
     {
-      "id": "9561", 
-      "floor": "2층",
-      "classTime": "12교시",
-      "table": "Table 2",
-      "timestamp": "2026-01-06T05:20:32.747Z"
+      "id": "1204",
+      "name": "강우빈"
+    },
+    {
+      "id": "1205",
+      "name": "정연돈"
+    },
+    {
+      "id": "1206",
+      "name": "배재현"
+    },
+    {
+      "id": "1207",
+      "name": "김준표"
+    },
+    {
+      "id": "1208",
+      "name": "이윤도"
     }
   ]
 }
