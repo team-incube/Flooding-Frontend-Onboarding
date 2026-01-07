@@ -156,7 +156,7 @@ export default function HomebasePage() {
               table={table}
               maxPeople={maxPeople}
               myName="1234 이름"
-              onCancel={handleCancelApplication} // ApplicationBar만 닫힘
+              onCancel={handleCancelApplication}
               onSuccess={() => handleApplySuccess(table)}
             />
           ) : (
