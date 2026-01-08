@@ -1,44 +1,31 @@
-'use client';
+"use client";
 import { useState } from "react";
 
-const ClubChoice = () => {
-  const [selectedClub, setSelectedClub] = useState<string>(' ');
+export default function ClubChoice({ setCategory }: { setCategory: (v: string) => void }) {
+  const [selected, setSelected] = useState<string>("");
 
-  const handleClubChange = (value: string) => {
-    setSelectedClub(value);
+  const handleClick = (value: string) => {
+    setSelected(value);
+    setCategory(value);
   };
 
   return (
     <div>
-      <h2 className="text-lg font-semibold">동아리 유형</h2>
-      <div className="flex gap-2 my-1">
-        <button
-          type="button"
-          className={`px-4 py-2 rounded-md cursor-pointer ${selectedClub === '전공동아리' ? 'bg-[#727DEB] text-white' : 'bg-[#F4F4F4]'}`}
-          onClick={() => handleClubChange('전공동아리')}
-        >
-          전공동아리
-        </button>
-
-        <button
-          type="button"
-          className={`px-4 py-2 rounded-md cursor-pointer ${selectedClub === '자율동아리' ? 'bg-[#727DEB] text-white' : 'bg-[#F4F4F4]'}`}
-          onClick={() => handleClubChange('자율동아리')}
-        >
-          자율동아리
-        </button>
-
-        <button
-          type="button"
-          className={`px-4 py-2 rounded-md cursor-pointer ${selectedClub === '취업동아리' ? 'bg-[#727DEB] text-white' : 'bg-[#F4F4F4]'}`}
-          onClick={() => handleClubChange('취업동아리')}
-        >
-          취업동아리
-        </button>
+      <p className="font-semibold mb-1">동아리 유형</p>
+      <div className="flex gap-2">
+        {["전공동아리", "자율동아리", "취업동아리"].map((type) => (
+          <button
+            key={type}
+            type="button"
+            onClick={() => handleClick(type)}
+            className={`px-3 py-1 rounded cursor-pointer hover:bg-[#1866E1] hover:text-white transition-colors ${
+              selected === type ? "bg-[#1866E1]  text-white" : "bg-gray-200"
+            }`}
+          >
+            {type}
+          </button>
+        ))}
       </div>
-      <p className="text-sm">유형: <span className="text-[#727DEB] font-semibold" >{selectedClub}</span></p>
     </div>
   );
-};
-
-export default ClubChoice;
+}
