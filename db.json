@@ -4,13 +4,19 @@
       "id": 1,
       "name": "INCUBE",
       "description": "후배들의 가능성을 보호·성장시켜 세상을 밝히는 인재로 길러내는 동아리",
-      "members": ["한국", "문강현"]
+      "members": [
+        "한국",
+        "문강현"
+      ]
     },
     {
       "id": 2,
       "name": "코디",
       "description": "개발하는 동아리",
-      "members": ["배순우", "강우빈"]
+      "members": [
+        "배순우",
+        "강우빈"
+      ]
     },
     {
       "id": 3,
@@ -22,7 +28,10 @@
       "id": 4,
       "name": "더모먼트",
       "description": "교내 프로젝트하는 동아리",
-      "members": ["정연돈", "배재현"]
+      "members": [
+        "정연돈",
+        "배재현"
+      ]
     },
     {
       "id": 5,
@@ -40,51 +49,291 @@
       "id": 7,
       "name": "게이미즘",
       "description": "게임 개발 동아리",
-      "members": ["김준표", "이윤도"]
+      "members": [
+        "김준표",
+        "이윤도"
+      ]
     }
   ],
   "musics": [
-    { "id": 1, "title": "Machine", "artist": "EK", "likes": 1 },
-    { "id": 2, "title": "Antifreeze", "artist": "검정치마", "likes": 9 },
-    { "id": 3, "title": "Big Love", "artist": "검정치마", "likes": 0 },
-    { "id": 4, "title": "두 번째 고백", "artist": "BTOB", "likes": 51 },
-    { "id": 5, "title": "촛불하나", "artist": "지오디", "likes": 23 },
-    { "id": 6, "title": "한시 오분 (1:05)", "artist": "검정치마", "likes": 12 },
-    { "id": 7, "title": "Boat", "artist": "죠지", "likes": 20 },
-    { "id": 8, "title": "행복한 나를", "artist": "림킴", "likes": 15 },
-    { "id": 9, "title": "첫사랑", "artist": "써니사이드", "likes": 20 },
-    { "id": 10, "title": "기억은 추억이 된다", "artist": "적재", "likes": 51 },
-    { "id": 11, "title": "그리워하다", "artist": "BTOB", "likes": 10 },
-    { "id": 12, "title": "ETA", "artist": "NewJeans", "likes": 5 }
+    {
+      "id": 1,
+      "title": "Machine",
+      "artist": "EK",
+      "likes": 1
+    },
+    {
+      "id": 2,
+      "title": "Antifreeze",
+      "artist": "검정치마",
+      "likes": 9
+    },
+    {
+      "id": 3,
+      "title": "Big Love",
+      "artist": "검정치마",
+      "likes": 0
+    },
+    {
+      "id": 4,
+      "title": "두 번째 고백",
+      "artist": "BTOB",
+      "likes": 51
+    },
+    {
+      "id": 5,
+      "title": "촛불하나",
+      "artist": "지오디",
+      "likes": 23
+    },
+    {
+      "id": 6,
+      "title": "한시 오분 (1:05)",
+      "artist": "검정치마",
+      "likes": 12
+    },
+    {
+      "id": 7,
+      "title": "Boat",
+      "artist": "죠지",
+      "likes": 20
+    },
+    {
+      "id": 8,
+      "title": "행복한 나를",
+      "artist": "림킴",
+      "likes": 15
+    },
+    {
+      "id": 9,
+      "title": "첫사랑",
+      "artist": "써니사이드",
+      "likes": 20
+    },
+    {
+      "id": 10,
+      "title": "기억은 추억이 된다",
+      "artist": "적재",
+      "likes": 51
+    },
+    {
+      "id": 11,
+      "title": "그리워하다",
+      "artist": "BTOB",
+      "likes": 10
+    },
+    {
+      "id": 12,
+      "title": "ETA",
+      "artist": "NewJeans",
+      "likes": 5
+    }
   ],
   "homebases": [
     {
       "id": 1,
       "floor": 2,
       "seatNumber": 1,
-      "isOccupied": false,
-      "occupiedBy": null
+      "isOccupied": true,
+      "occupiedBy": "1201",
+      "reason": "팀 프로젝트 회의",
+      "classTime": "9교시"
     },
     {
       "id": 2,
-      "floor": 4,
-      "seatNumber": 1,
+      "floor": 2,
+      "seatNumber": 2,
       "isOccupied": false,
-      "occupiedBy": null
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
     },
     {
       "id": 3,
-      "floor": 3,
-      "seatNumber": 2,
-      "isOccupied": false,
-      "occupiedBy": null
+      "floor": 2,
+      "seatNumber": 3,
+      "isOccupied": true,
+      "occupiedBy": "1202",
+      "reason": "개인 자습",
+      "classTime": "9교시"
     },
     {
       "id": 4,
       "floor": 2,
+      "seatNumber": 4,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 5,
+      "floor": 2,
+      "seatNumber": 5,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 6,
+      "floor": 3,
       "seatNumber": 1,
       "isOccupied": false,
-      "occupiedBy": null
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 7,
+      "floor": 3,
+      "seatNumber": 2,
+      "isOccupied": true,
+      "occupiedBy": "1203",
+      "reason": "스터디",
+      "classTime": "9교시"
+    },
+    {
+      "id": 8,
+      "floor": 3,
+      "seatNumber": 3,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 9,
+      "floor": 3,
+      "seatNumber": 4,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 10,
+      "floor": 3,
+      "seatNumber": 5,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 11,
+      "floor": 4,
+      "seatNumber": 1,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 12,
+      "floor": 4,
+      "seatNumber": 2,
+      "isOccupied": true,
+      "occupiedBy": "1204",
+      "reason": "팀 프로젝트",
+      "classTime": "9교시"
+    },
+    {
+      "id": 13,
+      "floor": 4,
+      "seatNumber": 3,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 14,
+      "floor": 4,
+      "seatNumber": 4,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 15,
+      "floor": 4,
+      "seatNumber": 5,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": "71a4",
+      "floor": 4,
+      "seatNumber": 1,
+      "isOccupied": true,
+      "occupiedBy": "1234 이름",
+      "reason": "123",
+      "classTime": "9교시"
+    },
+    {
+      "id": "ac5e",
+      "floor": 2,
+      "seatNumber": 1,
+      "isOccupied": true,
+      "occupiedBy": "1234 이름",
+      "reason": "테스트",
+      "classTime": "8교시"
+    },
+    {
+      "id": "fa33",
+      "floor": 4,
+      "seatNumber": 2,
+      "isOccupied": true,
+      "occupiedBy": "1234 이름",
+      "reason": "테스트",
+      "classTime": "8교시"
+    },
+    {
+      "id": "60fe",
+      "floor": 3,
+      "seatNumber": 4,
+      "isOccupied": true,
+      "occupiedBy": "1234 이름",
+      "reason": "테스트",
+      "classTime": "8교시"
+    }
+  ],
+  "students": [
+    {
+      "id": "1201",
+      "name": "김지유"
+    },
+    {
+      "id": "1202",
+      "name": "배순우"
+    },
+    {
+      "id": "1203",
+      "name": "문강현"
+    },
+    {
+      "id": "1204",
+      "name": "강우빈"
+    },
+    {
+      "id": "1205",
+      "name": "정연돈"
+    },
+    {
+      "id": "1206",
+      "name": "배재현"
+    },
+    {
+      "id": "1207",
+      "name": "김준표"
+    },
+    {
+      "id": "1208",
+      "name": "이윤도"
     }
   ]
 }

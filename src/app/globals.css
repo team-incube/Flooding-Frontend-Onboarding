@@ -2,6 +2,10 @@
 
 @theme {
   --font-family-sans: Pretendard, sans-serif;
+
+  --color-gray-50: #f8f9fb;
+  --color-main-100: #1866e1;
+  --color-gray-700: #333d48;
 }
 
 body {
