@@ -19,7 +19,7 @@ export default function Sidebar({
   onTime,
 }: SidebarProps) {
   return (
-    <div className="w-80 bg-white rounded-2xl p-7 h-fit">
+    <div className="w-90 h-130 bg-white rounded-2xl p-7">
       <div className="mb-12">
         <h3 className="text-xl font-semibold text-gray-700 mb-5">층수</h3>
         <div className="space-y-5">
