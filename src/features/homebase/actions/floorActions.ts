@@ -138,7 +138,7 @@ export async function fetchStudents(): Promise<Student[]> {
 }
 
 export interface Seat {
-  id: number;
+  id: string | number;
   floor: number;
   seatNumber: number;
   isOccupied: boolean;
@@ -183,7 +183,9 @@ export async function fetchSeats(floor: number): Promise<Seat[]> {
   }
 }
 
-export async function releaseSeat(id: number): Promise<{ success: boolean }> {
+export async function releaseSeat(
+  id: string | number
+): Promise<{ success: boolean }> {
   try {
     await axios.patch(`${API_BASE_URL}/seats/${id}`, {
       isOccupied: false,
