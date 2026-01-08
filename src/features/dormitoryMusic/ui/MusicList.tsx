@@ -11,16 +11,16 @@ interface Props {
 
 export default function MusicList({ date, sort }: Props) {
     const { data = [], isLoading, isError } = useQuery<Music[]>({
-    queryKey: ["musicList", sort], 
+    queryKey: ["musicList", date, sort], 
     queryFn: async () => {
         let url = `http://127.0.0.1:3001/musics`;
         
         if (sort === "popular") {
             url += `?_sort=-likes`; 
         } else if (sort === "latest") {
-            url += `?_sort=-id`;
-        } else if (sort === "oldest") {
             url += `?_sort=id`;
+        } else if (sort === "oldest") {
+            url += `?_sort=-id`;
         }
 
         const res = await fetch(url);
