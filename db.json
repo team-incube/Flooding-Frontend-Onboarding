@@ -4,13 +4,19 @@
       "id": 1,
       "name": "INCUBE",
       "description": "후배들의 가능성을 보호·성장시켜 세상을 밝히는 인재로 길러내는 동아리",
-      "members": ["한국", "문강현"]
+      "members": [
+        "한국",
+        "문강현"
+      ]
     },
     {
       "id": 2,
       "name": "코디",
       "description": "개발하는 동아리",
-      "members": ["배순우", "강우빈"]
+      "members": [
+        "배순우",
+        "강우빈"
+      ]
     },
     {
       "id": 3,
@@ -22,7 +28,10 @@
       "id": 4,
       "name": "더모먼트",
       "description": "교내 프로젝트하는 동아리",
-      "members": ["정연돈", "배재현"]
+      "members": [
+        "정연돈",
+        "배재현"
+      ]
     },
     {
       "id": 5,
@@ -40,7 +49,10 @@
       "id": 7,
       "name": "게이미즘",
       "description": "게임 개발 동아리",
-      "members": ["김준표", "이윤도"]
+      "members": [
+        "김준표",
+        "이윤도"
+      ]
     }
   ],
   "musics": [
@@ -119,31 +131,175 @@
   ],
   "homebases": [
     {
-      "id": "hb-3f",
-      "floor": "3층",
-      "classTime": "9교시",
-      "table": "Table 1",
-      "members": ["김지유", "배순우"],
+      "id": 1,
+      "floor": 2,
+      "seatNumber": 1,
+      "isOccupied": true,
+      "occupiedBy": "1201",
       "reason": "팀 프로젝트 회의",
-      "timestamp": "2026-01-06T14:00:00.000Z"
+      "classTime": "9교시"
     },
     {
-      "id": "hb-4f",
-      "floor": "4층",
-      "classTime": "9교시",
-      "table": "Table 3",
-      "members": ["문강현"],
+      "id": 2,
+      "floor": 2,
+      "seatNumber": 2,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 3,
+      "floor": 2,
+      "seatNumber": 3,
+      "isOccupied": true,
+      "occupiedBy": "1202",
       "reason": "개인 자습",
-      "timestamp": "2026-01-06T14:10:00.000Z"
+      "classTime": "9교시"
     },
     {
-      "id": "hb-5f",
-      "floor": "2층",
-      "classTime": "9교시",
-      "table": "Table 2",
-      "members": ["강우빈", "정연돈"],
+      "id": 4,
+      "floor": 2,
+      "seatNumber": 4,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 5,
+      "floor": 2,
+      "seatNumber": 5,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 6,
+      "floor": 3,
+      "seatNumber": 1,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 7,
+      "floor": 3,
+      "seatNumber": 2,
+      "isOccupied": true,
+      "occupiedBy": "1203",
       "reason": "스터디",
-      "timestamp": "2026-01-06T14:20:00.000Z"
+      "classTime": "9교시"
+    },
+    {
+      "id": 8,
+      "floor": 3,
+      "seatNumber": 3,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 9,
+      "floor": 3,
+      "seatNumber": 4,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 10,
+      "floor": 3,
+      "seatNumber": 5,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 11,
+      "floor": 4,
+      "seatNumber": 1,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 12,
+      "floor": 4,
+      "seatNumber": 2,
+      "isOccupied": true,
+      "occupiedBy": "1204",
+      "reason": "팀 프로젝트",
+      "classTime": "9교시"
+    },
+    {
+      "id": 13,
+      "floor": 4,
+      "seatNumber": 3,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 14,
+      "floor": 4,
+      "seatNumber": 4,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": 15,
+      "floor": 4,
+      "seatNumber": 5,
+      "isOccupied": false,
+      "occupiedBy": null,
+      "reason": null,
+      "classTime": "9교시"
+    },
+    {
+      "id": "71a4",
+      "floor": 4,
+      "seatNumber": 1,
+      "isOccupied": true,
+      "occupiedBy": "1234 이름",
+      "reason": "123",
+      "classTime": "9교시"
+    },
+    {
+      "id": "ac5e",
+      "floor": 2,
+      "seatNumber": 1,
+      "isOccupied": true,
+      "occupiedBy": "1234 이름",
+      "reason": "테스트",
+      "classTime": "8교시"
+    },
+    {
+      "id": "fa33",
+      "floor": 4,
+      "seatNumber": 2,
+      "isOccupied": true,
+      "occupiedBy": "1234 이름",
+      "reason": "테스트",
+      "classTime": "8교시"
+    },
+    {
+      "id": "60fe",
+      "floor": 3,
+      "seatNumber": 4,
+      "isOccupied": true,
+      "occupiedBy": "1234 이름",
+      "reason": "테스트",
+      "classTime": "8교시"
     }
   ],
   "students": [
