@@ -150,3 +150,62 @@ export async function saveTableSelection(
     return { success: false };
   }
 }
+
+export interface Seat {
+  id: number;
+  floor: number;
+  seatNumber: number;
+  isOccupied: boolean;
+  occupiedBy: string | null;
+  reason: string | null;
+}
+
+export async function applySeat(
+  floor: number,
+  seatNumber: number,
+  occupiedBy: string,
+  reason: string
+): Promise<{ success: boolean; data?: Seat }> {
+  try {
+    const response = await axios.post<Seat>(`${API_BASE_URL}/seats`, {
+      floor,
+      seatNumber,
+      isOccupied: true,
+      occupiedBy,
+      reason,
+    });
+
+    return {
+      success: true,
+      data: response.data,
+    };
+  } catch {
+    return {
+      success: false,
+    };
+  }
+}
+
+export async function fetchSeats(floor: number): Promise<Seat[]> {
+  try {
+    const response = await axios.get<Seat[]>(
+      `${API_BASE_URL}/seats?floor=${floor}`
+    );
+    return response.data;
+  } catch {
+    return [];
+  }
+}
+
+export async function releaseSeat(id: number): Promise<{ success: boolean }> {
+  try {
+    await axios.patch(`${API_BASE_URL}/seats/${id}`, {
+      isOccupied: false,
+      occupiedBy: null,
+      reason: null,
+    });
+    return { success: true };
+  } catch {
+    return { success: false };
+  }
+}
