@@ -7,10 +7,7 @@ import Floor3Layout from "@/features/homebase/ui/Floor3";
 import Floor4Layout from "@/features/homebase/ui/Floor4";
 import { useState, useEffect, useMemo } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import {
-  fetchAppliedTables,
-  saveTableSelection,
-} from "@/features/homebase/actions/floorActions";
+import { fetchAppliedTables } from "@/features/homebase/actions/floorActions";
 import { getTablesByFloor } from "@/features/homebase/lib/tableData";
 import {
   isValidFloor,
@@ -79,13 +76,9 @@ export default function HomebasePage() {
     setShowApplicationBar(false);
   };
 
-  const handleTableChange = async (newTable: string) => {
+  const handleTableChange = (newTable: string) => {
     updateUrl(floor, time, newTable);
     setShowApplicationBar(true);
-
-    if (floor && time && isValidFloor(floor) && isValidClassTime(time)) {
-      await saveTableSelection(floor, time, newTable);
-    }
   };
 
   useEffect(() => {

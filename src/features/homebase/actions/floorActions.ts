@@ -75,13 +75,18 @@ export async function fetchFloorTableData(floor: string): Promise<ApiResponse> {
 
 export async function applyHomebase(payload: ApplyPayload) {
   try {
+    const floorNum = parseInt(payload.floor.replace("층", ""));
+    const seatNum = parseInt(payload.table.replace("Table ", ""));
+    const classTimeStr = payload.classTime;
+    const occupiedBy = payload.members[0] || null;
+
     const response = await axios.post<FloorData>(`${API_BASE_URL}/homebases`, {
-      floor: payload.floor,
-      classTime: payload.classTime,
-      table: payload.table,
-      members: payload.members,
+      floor: floorNum,
+      seatNumber: seatNum,
+      isOccupied: true,
+      occupiedBy: occupiedBy,
       reason: payload.reason,
-      timestamp: new Date().toISOString(),
+      classTime: classTimeStr,
     });
 
     return {
@@ -129,25 +134,6 @@ export async function fetchStudents(): Promise<Student[]> {
     return response.data;
   } catch {
     return [];
-  }
-}
-
-export async function saveTableSelection(
-  floor: string,
-  classTime: string,
-  table: string
-) {
-  try {
-    await axios.post(`${API_BASE_URL}/homebases`, {
-      floor,
-      classTime,
-      table,
-      timestamp: new Date().toISOString(),
-    });
-
-    return { success: true };
-  } catch {
-    return { success: false };
   }
 }
 

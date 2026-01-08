@@ -136,7 +136,8 @@
       "seatNumber": 1,
       "isOccupied": true,
       "occupiedBy": "1201",
-      "reason": "팀 프로젝트 회의"
+      "reason": "팀 프로젝트 회의",
+      "classTime": "9교시"
     },
     {
       "id": 2,
@@ -144,7 +145,8 @@
       "seatNumber": 2,
       "isOccupied": false,
       "occupiedBy": null,
-      "reason": null
+      "reason": null,
+      "classTime": "9교시"
     },
     {
       "id": 3,
@@ -152,7 +154,8 @@
       "seatNumber": 3,
       "isOccupied": true,
       "occupiedBy": "1202",
-      "reason": "개인 자습"
+      "reason": "개인 자습",
+      "classTime": "9교시"
     },
     {
       "id": 4,
@@ -160,7 +163,8 @@
       "seatNumber": 4,
       "isOccupied": false,
       "occupiedBy": null,
-      "reason": null
+      "reason": null,
+      "classTime": "9교시"
     },
     {
       "id": 5,
@@ -168,7 +172,8 @@
       "seatNumber": 5,
       "isOccupied": false,
       "occupiedBy": null,
-      "reason": null
+      "reason": null,
+      "classTime": "9교시"
     },
     {
       "id": 6,
@@ -176,7 +181,8 @@
       "seatNumber": 1,
       "isOccupied": false,
       "occupiedBy": null,
-      "reason": null
+      "reason": null,
+      "classTime": "9교시"
     },
     {
       "id": 7,
@@ -184,7 +190,8 @@
       "seatNumber": 2,
       "isOccupied": true,
       "occupiedBy": "1203",
-      "reason": "스터디"
+      "reason": "스터디",
+      "classTime": "9교시"
     },
     {
       "id": 8,
@@ -192,7 +199,8 @@
       "seatNumber": 3,
       "isOccupied": false,
       "occupiedBy": null,
-      "reason": null
+      "reason": null,
+      "classTime": "9교시"
     },
     {
       "id": 9,
@@ -200,7 +208,8 @@
       "seatNumber": 4,
       "isOccupied": false,
       "occupiedBy": null,
-      "reason": null
+      "reason": null,
+      "classTime": "9교시"
     },
     {
       "id": 10,
@@ -208,7 +217,8 @@
       "seatNumber": 5,
       "isOccupied": false,
       "occupiedBy": null,
-      "reason": null
+      "reason": null,
+      "classTime": "9교시"
     },
     {
       "id": 11,
@@ -216,7 +226,8 @@
       "seatNumber": 1,
       "isOccupied": false,
       "occupiedBy": null,
-      "reason": null
+      "reason": null,
+      "classTime": "9교시"
     },
     {
       "id": 12,
@@ -224,7 +235,8 @@
       "seatNumber": 2,
       "isOccupied": true,
       "occupiedBy": "1204",
-      "reason": "팀 프로젝트"
+      "reason": "팀 프로젝트",
+      "classTime": "9교시"
     },
     {
       "id": 13,
@@ -232,7 +244,8 @@
       "seatNumber": 3,
       "isOccupied": false,
       "occupiedBy": null,
-      "reason": null
+      "reason": null,
+      "classTime": "9교시"
     },
     {
       "id": 14,
@@ -240,7 +253,8 @@
       "seatNumber": 4,
       "isOccupied": false,
       "occupiedBy": null,
-      "reason": null
+      "reason": null,
+      "classTime": "9교시"
     },
     {
       "id": 15,
@@ -248,49 +262,44 @@
       "seatNumber": 5,
       "isOccupied": false,
       "occupiedBy": null,
-      "reason": null
+      "reason": null,
+      "classTime": "9교시"
     },
     {
-      "id": "7892",
-      "floor": "2층",
-      "classTime": "9교시",
-      "table": "Table 1",
-      "timestamp": "2026-01-08T05:17:52.859Z"
+      "id": "71a4",
+      "floor": 4,
+      "seatNumber": 1,
+      "isOccupied": true,
+      "occupiedBy": "1234 이름",
+      "reason": "123",
+      "classTime": "9교시"
     },
     {
-      "id": "7151",
-      "floor": "2층",
-      "classTime": "9교시",
-      "table": "Table 1",
-      "timestamp": "2026-01-08T05:17:53.956Z"
+      "id": "ac5e",
+      "floor": 2,
+      "seatNumber": 1,
+      "isOccupied": true,
+      "occupiedBy": "1234 이름",
+      "reason": "테스트",
+      "classTime": "8교시"
     },
     {
-      "id": "c57c",
-      "floor": "2층",
-      "classTime": "9교시",
-      "table": "Table 3",
-      "timestamp": "2026-01-08T05:17:54.444Z"
+      "id": "fa33",
+      "floor": 4,
+      "seatNumber": 2,
+      "isOccupied": true,
+      "occupiedBy": "1234 이름",
+      "reason": "테스트",
+      "classTime": "8교시"
     },
     {
-      "id": "9371",
-      "floor": "4층",
-      "classTime": "9교시",
-      "table": "Table 1",
-      "timestamp": "2026-01-08T05:17:55.995Z"
-    },
-    {
-      "id": "24e0",
-      "floor": "4층",
-      "classTime": "9교시",
-      "table": "Table 3",
-      "timestamp": "2026-01-08T05:17:56.809Z"
-    },
-    {
-      "id": "5c40",
-      "floor": "4층",
-      "classTime": "9교시",
-      "table": "Table 4",
-      "timestamp": "2026-01-08T05:17:57.376Z"
+      "id": "60fe",
+      "floor": 3,
+      "seatNumber": 4,
+      "isOccupied": true,
+      "occupiedBy": "1234 이름",
+      "reason": "테스트",
+      "classTime": "8교시"
     }
   ],
   "students": [
