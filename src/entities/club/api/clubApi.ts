@@ -12,12 +12,9 @@ export async function fetchClubById(id: number) {
   );
   return data;
 }
-<<<<<<< HEAD
 
 // 새 동아리 생성
 export async function createClub(newClub: ClubData) {
   const { data } = await axios.post<ClubData>("http://localhost:3001/clubs", newClub);
   return data;
 }
-=======
->>>>>>> origin/develop

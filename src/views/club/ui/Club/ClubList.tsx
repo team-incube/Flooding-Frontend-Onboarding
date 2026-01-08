@@ -1,14 +1,10 @@
 "use client";
 
-<<<<<<< HEAD
 import { useState, useMemo } from "react";
-=======
->>>>>>> origin/develop
 import { useClubsQuery } from "@/entities/club";
 import Header from "@/widgets/header/ui";
 import Link from "next/link";
 import type { ClubData } from "@/shared/types/club/type";
-<<<<<<< HEAD
 import CreateClubModal from "@/features/club/ui/CreateClubModal";
 
 export default function ClubList() {
@@ -30,11 +26,6 @@ export default function ClubList() {
     await refetch(); // 최신 목록 갱신
     closeModal();
   };
-=======
-
-export default function ClubList() {
-  const { data: clubs } = useClubsQuery();
->>>>>>> origin/develop
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -42,7 +33,6 @@ export default function ClubList() {
       <div className="max-w-375 mx-auto px-10 py-9">
         <div className="bg-white rounded-2xl p-7">
           <h1 className="text-3xl font-bold mb-6">동아리</h1>
-<<<<<<< HEAD
           
           <button
             onClick={openModal}
@@ -53,10 +43,6 @@ export default function ClubList() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {clubList?.map((club: ClubData) => (
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {clubs?.map((club: ClubData) => (
->>>>>>> origin/develop
               <Link
                 key={club.id}
                 href={`/clubs/${club.id}`}
@@ -66,20 +52,16 @@ export default function ClubList() {
                 <p className="text-gray-800 text-sm line-clamp-2">
                   {club.description}
                 </p>
-<<<<<<< HEAD
                 {club.category && (
                   <span className="inline-block mt-3 text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">
                     {club.category}
                   </span>
                 )}
-=======
->>>>>>> origin/develop
               </Link>
             ))}
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
       <CreateClubModal
         isOpen={isModalOpen}
@@ -89,8 +71,3 @@ export default function ClubList() {
     </div>
   );
 }
-=======
-    </div>
-  );
-}
->>>>>>> origin/develop
