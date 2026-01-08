@@ -4,6 +4,16 @@ import axios from "axios";
 
 const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:3001";
 
+interface HomebaseResponse {
+  id?: string | number;
+  floor: number;
+  classTime: string;
+  seatNumber: number;
+  isOccupied: boolean;
+  occupiedBy?: string | null;
+  reason?: string | null;
+}
+
 export interface FloorData {
   id?: string;
   floor: string;
@@ -106,18 +116,20 @@ export async function fetchAppliedTables(
   classTime: string
 ): Promise<string[]> {
   try {
-    const res = await axios.get<FloorData[]>(`${API_BASE_URL}/homebases`);
+    const res = await axios.get<HomebaseResponse[]>(
+      `${API_BASE_URL}/homebases`
+    );
+
+    const floorNum = String(floor).replace("층", "");
 
     return res.data
       .filter(
         (item) =>
-          item.floor === floor &&
+          String(item.floor) === floorNum &&
           item.classTime === classTime &&
-          Array.isArray(item.members) &&
-          item.members.length > 0 &&
-          item.reason
+          item.isOccupied === true
       )
-      .map((item) => item.table);
+      .map((item) => `Table ${item.seatNumber}`);
   } catch {
     return [];
   }
