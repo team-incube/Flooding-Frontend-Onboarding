@@ -4,19 +4,13 @@
       "id": "1",
       "name": "INCUBE",
       "description": "후배들의 가능성을 보호·성장시켜 세상을 밝히는 인재로 길러내는 동아리",
-      "members": [
-        "한국",
-        "문강현"
-      ]
+      "members": ["한국", "문강현"]
     },
     {
       "id": "2",
       "name": "코디",
       "description": "개발하는 동아리",
-      "members": [
-        "배순우",
-        "강우빈"
-      ]
+      "members": ["배순우", "강우빈"]
     },
     {
       "id": "3",
@@ -28,10 +22,7 @@
       "id": "4",
       "name": "더모먼트",
       "description": "교내 프로젝트하는 동아리",
-      "members": [
-        "정연돈",
-        "배재현"
-      ]
+      "members": ["정연돈", "배재현"]
     },
     {
       "id": "5",
@@ -49,10 +40,7 @@
       "id": "7",
       "name": "게이미즘",
       "description": "게임 개발 동아리",
-      "members": [
-        "김준표",
-        "이윤도"
-      ]
+      "members": ["김준표", "이윤도"]
     }
   ],
   "musics": [
@@ -299,15 +287,6 @@
       "isOccupied": true,
       "occupiedBy": "1234 이름",
       "reason": "테스트",
-      "classTime": "8교시"
-    },
-    {
-      "id": "0cba",
-      "floor": 2,
-      "seatNumber": 2,
-      "isOccupied": true,
-      "occupiedBy": "1234 이름",
-      "reason": "ㅇㅇㅇ",
       "classTime": "8교시"
     }
   ],
