@@ -46,7 +46,7 @@ export default function ClubList() {
               <Link
                 key={club.id}
                 href={`/clubs/${club.id}`}
-                className="bg-gray-50 rounded-xl p-5 hover:shadow-md transition-shadow"
+                className="bg-gray-50 rounded-xl p-5"
               >
                 <h2 className="text-xl font-semibold mb-2">{club.name}</h2>
                 <p className="text-gray-800 text-sm line-clamp-2">

@@ -1,7 +1,10 @@
 "use client";
 import { useClubQuery } from "@/entities/club";
+import { AddMemberModal, RemoveMemberModal, MemberList } from "@/features/club";
 import Header from "@/widgets/header/ui";
 import Link from "next/link";
+import Plus from "@/shared/assets/icons/Plus";
+import { useState } from "react";
 
 interface ClubDetailProps {
   id: number;
@@ -9,6 +12,14 @@ interface ClubDetailProps {
 
 export default function ClubDetail({ id }: ClubDetailProps) {
   const { data: club } = useClubQuery(id);
+  const [showAdd, setShowAdd] = useState(false);
+  const [showDelete, setShowDelete] = useState(false);
+  const [targetMember, setTargetMember] = useState("");
+
+  const handleRemove = (name: string) => {
+    setTargetMember(name);
+    setShowDelete(true);
+  };
 
   if (!club) {
     return <div>동아리를 찾을 수 없습니다.</div>;
@@ -32,21 +43,36 @@ export default function ClubDetail({ id }: ClubDetailProps) {
             <p className="text-gray-800">{club.description}</p>
           </div>
           <div>
-            <h2 className="text-xl font-semibold mb-4">멤버</h2>
-            {club.members.length > 0 ? (
-              <div className="flex flex-wrap gap-3">
-                {club.members.map((member: string, index: number) => (
-                  <div key={index} className="bg-gray-50 rounded-lg px-4 py-2">
-                    <span className="text-gray-800">{member}</span>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <p className="text-gray-500">멤버가 없습니다.</p>
-            )}
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-semibold">멤버</h2>
+              <button
+                onClick={() => setShowAdd(true)}
+                className="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-lg"
+              >
+                <Plus />
+                <span>멤버 초대</span>
+              </button>
+            </div>
+            <MemberList members={club.members} onRemoveMember={handleRemove} />
           </div>
         </div>
       </div>
+
+      <AddMemberModal
+        isOpen={showAdd}
+        onClose={() => setShowAdd(false)}
+        club={club}
+      />
+
+      <RemoveMemberModal
+        isOpen={showDelete}
+        onClose={() => {
+          setShowDelete(false);
+          setTargetMember("");
+        }}
+        clubId={club.id}
+        memberName={targetMember}
+      />
     </div>
   );
 }

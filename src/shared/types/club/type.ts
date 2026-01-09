@@ -1,9 +1,8 @@
 export interface ClubData {
-  // id: number;
-  id: string;
+  id: number | string;
   name: string;
   description: string;
   category: string;
-  image: string
+  image: string;
   members: string[];
 }
