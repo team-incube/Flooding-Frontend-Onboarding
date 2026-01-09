@@ -67,7 +67,7 @@ export default function AddMemberModal({
 
   return (
     <Modal isOpen={isOpen} onClose={handleClose}>
-      <h3 className="text-xl **:font-bold mb-4">멤버 초대</h3>
+      <h3 className="text-xl font-bold mb-4">멤버 초대</h3>
       <div className="relative mb-4">
         <input
           type="text"
