@@ -15,7 +15,10 @@ export async function fetchClubById(id: number | string) {
 }
 
 export async function createClub(newClub: ClubData) {
-  const { data } = await axios.post<ClubData>("http://localhost:3001/clubs", newClub);
+  const { data } = await axios.post<ClubData>(
+    "http://localhost:3001/clubs",
+    newClub
+  );
   return data;
 }
 
