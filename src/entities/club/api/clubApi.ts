@@ -14,6 +14,14 @@ export async function fetchClubById(id: number | string) {
   return data;
 }
 
+export async function createClub(newClub: ClubData) {
+  const { data } = await axios.post<ClubData>(
+    "http://localhost:3001/clubs",
+    newClub
+  );
+  return data;
+}
+
 export async function addMember(clubId: number | string, memberName: string) {
   const { data: students } = await axios.get<StudentData[]>(
     "http://localhost:3001/students"
