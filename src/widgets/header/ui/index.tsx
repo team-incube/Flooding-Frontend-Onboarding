@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from "@/shared/assets/svg/Logo";
+import Logo from "@/shared/assets/icons/Logo";
 import Profile from "@/shared/assets/icons/Profile";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
