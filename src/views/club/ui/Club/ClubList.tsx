@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { useClubsQuery } from "@/entities/club";
+import { useClubsQuery, type ClubData } from "@/entities/club";
 import Header from "@/widgets/header/ui";
 import Link from "next/link";
-import type { ClubData } from "@/shared/types/club/type";
 import CreateClubModal from "@/features/club/ui/CreateClubModal";
 
 export default function ClubList() {

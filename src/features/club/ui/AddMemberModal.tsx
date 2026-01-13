@@ -1,8 +1,7 @@
 import Modal from "@/shared/ui/Modal";
 import { useState } from "react";
 import { useStudentsQuery } from "@/entities/student";
-import { useAddMemberMutation } from "@/entities/club";
-import type { ClubData } from "@/shared/types/club/type";
+import { useAddMemberMutation, type ClubData } from "@/entities/club";
 
 interface AddMemberModalProps {
   isOpen: boolean;

@@ -3,8 +3,7 @@
 import { useState } from "react";
 import ClubImage from "./ClubImage";
 import ClubChoice from "./ClubChoice";
-import { ClubData } from "@/shared/types/club/type";
-import { createClub } from "@/entities/club/api/clubApi";
+import { ClubData, createClub } from "@/entities/club";
 
 interface CreateClubModalProps {
   isOpen: boolean;

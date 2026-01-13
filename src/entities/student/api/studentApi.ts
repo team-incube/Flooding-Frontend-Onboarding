@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { StudentData } from "@/shared/types/student/type";
+import type { StudentData } from "../model/types";
 
 export async function fetchStudents() {
   const { data } = await axios.get<StudentData[]>(
