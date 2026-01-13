@@ -1,6 +1,6 @@
 import axios from "axios";
-import type { ClubData } from "@/shared/types/club/type";
-import type { StudentData } from "@/shared/types/student/type";
+import type { ClubData } from "../model/types";
+import type { StudentData } from "../../student/model/types";
 
 export async function fetchClubs() {
   const { data } = await axios.get<ClubData[]>("http://localhost:3001/clubs");
