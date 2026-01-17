@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "@/shared/api/axios";
 
 interface SaveData {
   floor: string;
@@ -6,10 +6,8 @@ interface SaveData {
   table: string;
 }
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3001";
-
 export async function saveHomebaseData(data: SaveData) {
-  const response = await axios.post(`${API_BASE_URL}/homebases`, {
+  const response = await axios.post("/homebases", {
     floor: data.floor,
     classTime: data.classTime,
     table: data.table,
