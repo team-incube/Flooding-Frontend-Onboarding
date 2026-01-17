@@ -9,10 +9,6 @@ import { useState, useEffect, useMemo } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { fetchAppliedTables } from "@/features/homebase/actions/floorActions";
 import { getTablesByFloor } from "@/features/homebase/lib/tableData";
-import {
-  isValidFloor,
-  isValidClassTime,
-} from "@/features/homebase/lib/constants";
 import ApplicationBar from "@/features/homebase/ui/Applicationbar";
 
 export default function HomebasePage() {
@@ -21,7 +17,7 @@ export default function HomebasePage() {
 
   const handleApplySuccess = (appliedTable: string) => {
     setDisabledTables((prev) =>
-      prev.includes(appliedTable) ? prev : [...prev, appliedTable]
+      prev.includes(appliedTable) ? prev : [...prev, appliedTable],
     );
     setShowApplicationBar(false);
   };
@@ -48,7 +44,7 @@ export default function HomebasePage() {
   const toUrlFormat = (
     floor: string | null,
     time: string | null,
-    table: string | null
+    table: string | null,
   ) => ({
     floor: floor ? floor.replace("층", "") : null,
     time: time ? time.replace("교시", "") : null,
@@ -149,7 +145,7 @@ export default function HomebasePage() {
               table={table}
               maxPeople={maxPeople}
               myName="1234 이름"
-              onCancel={handleCancelApplication} 
+              onCancel={handleCancelApplication}
               onSuccess={() => handleApplySuccess(table)}
             />
           ) : (
